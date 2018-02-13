@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Match Match Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+	<!-- <script src="js/game.js"></script> -->
+</head>
+<body>
+    <section class='container'>
+			<button type="button" class="btn btn--start js-btn-new-game">New Game</button>
+			<div class="game-field" id="game-field">
+				<div class="intro-block js-intro">
+					<article class="game-instruction">
+						<h2 class="header-instruction">Instruction</h2>
+						<ol class="list-rules">
+							<li>
+								Turn over any two cards.
+							</li>
+							<li>
+								If the two cards match, keep them.
+							</li>
+							<li>
+								If they don't match, turn them back over.
+							</li>
+							<li>
+								Remember what was on each card and where it was.
+							</li>
+							<li>
+								Watch and remember during the other player's turn.
+							</li>
+							<li>
+								The game is over when all the cards have been matched.
+							</li>
+						</ol>
+					</article>
+					<div class="choice-container">
+		        <form>
+						<fieldset class="choice-block">
+							<h3 class="choice-header">
+								Skird Cards
+							</h3>
+							<input type="radio" id="shirt-1" name="choice-shirt" value="shirt-1" data-shirt="1" class="choice-radio">
+							<label for="shirt-1" class="choice-label shirt-label">
+								<img src="img/shirt_1.jpg" alt="shirt-1">
+							</label>
+							<input type="radio" id="shirt-2" name="choice-shirt" value="shirt-2" data-shirt="2" class="choice-radio">
+							<label for="shirt-2" class="choice-label shirt-label">
+								<img src="img/shirt_2.jpg" alt="shirt-2">
+							</label>
+							<input type="radio" id="shirt-3" name="choice-shirt" value="shirt-3" data-shirt="3" class="choice-radio">
+							<label for="shirt-3" class="choice-label shirt-label">
+								<img src="img/shirt_3.jpg" alt="shirt-3">
+							</label>							
+						</fieldset>
+						<fieldset class="choice-block">							
+							<h3 class="choice-header">
+								Game Difficulty
+							</h3>
+							<input type="radio" id="diff-1" name="choice-diff" value="diff-1" data-diff="10" class="choice-radio">
+							<label for="diff-1" class="choice-label diff-label">
+								5 X 2
+							</label>
+							<input type="radio" id="diff-2" name="choice-diff" value="diff-2" data-diff="18" class="choice-radio">
+							<label for="diff-2" class="choice-label diff-label">
+								6 X 3
+							</label>
+							<input type="radio" id="diff-3" name="choice-diff" value="diff-3" data-diff="24" class="choice-radio">
+							<label for="diff-3" class="choice-label diff-label">
+								8 X 3
+							</label>
+						</fieldset>
+		        </form>
+					</div>
+				</div>
+			</div>
+       
+    </section>
+    <div class="win-block hide" id="win-window">
+      <h3 class="win-congatuation">
+        Winner!!!
+      </h3>
+      <p class="win-statistic">
+        The count of your attemts is <span class="attemt-count" id="attemt-count"></span>
+      </p>
+      <button type="botton" class="btn-win-continue" id="btn-continue">
+        Continue
+      </button>
+    </div>
+    <div class="overlay hide" id="overlay"></div>
+	<script src="./js/index.js"></script>
+</body>
+</html>

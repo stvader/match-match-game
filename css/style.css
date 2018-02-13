@@ -1,0 +1,265 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 1px;
+	font-family: Arial, sans-serif;
+	color: #000000;
+}
+
+body {
+	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	box-sizing: border-box;
+	background-color: #0e4515;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.btn {
+	float: right;
+	width: 200px;
+	height: 40px;
+	border-radius: 4px;
+	background-color: #6f4e6e;
+	border: none;
+	outline: none;
+	color: #ffffff;
+	font-size: 17rem;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+
+.btn--choice {
+	height: auto;
+	float: left;
+	margin-right: 30px;
+
+}
+
+.game-field {
+	height: 490px;
+	margin-top: 60px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 100px;
+	padding-right: 30px;
+	background: linear-gradient(to left, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);;
+}
+
+.game-instruction {
+	font-size: 15rem;
+}
+
+.header-instruction {
+	margin-top: 0;
+}
+
+.choice-form {
+	border: none;
+	outline: none;
+}
+
+.choice-block {
+	display: inline-block;
+	width: 400px;
+	height: 300px;
+	margin-right: 50px;
+	border: none;
+	box-sizing: border-box;
+	background-color: #6f4e6e;
+	font-size: 15rem;
+	color: #ffffff;
+	text-align: center;
+	vertical-align: top;
+}
+
+.choice-radio {
+	display: none;
+}
+
+.choice-label {
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto 5px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.shirt-label {
+	overflow: hidden;
+	
+}
+
+.shirt-label img {
+	margin-top: -20px;
+}
+
+.diff-label {	
+	line-height: 70px;
+}
+
+.choice-radio:checked + .shirt-label {
+	border: 2px solid red;
+}
+
+.choice-radio:checked + .diff-label {
+	color: red;
+}
+
+.timer {
+	width: 100px;
+	height: 100px;
+	margin: 50px auto;
+	font-size: 40rem;
+	color: #6f4e6e;
+}
+
+.card-container {
+	display: inline-block;
+	width: 100px;
+    height: 150px;
+	margin-right: 40px;
+	margin-bottom: 30px;
+    position: relative;
+    perspective: 800px;
+	cursor: pointer;
+	opacity: 1; 
+	transition: opacity 1.5s; 
+}
+
+.card {
+	width: 100%;
+    height: 100%;
+    position: absolute;   
+    transform-style: preserve-3d;
+    transition: transform 1s;    			
+}
+
+.card-shirt,
+.card-image {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-shirt {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: rotateY( 180deg );
+}
+
+.card-flipped {
+    transform: rotateY( 180deg );
+}
+
+.card-hidden {
+	opacity: 0;   
+}
+
+.card-hidden .card-shirt {
+	transform: rotateY(180deg);
+}
+
+.card-shirt--1 {
+	background-image: url(../img/shirt_1.jpg);	
+}
+
+.card-shirt--2 {
+	background-image: url(../img/shirt_2.jpg);	
+}
+
+.card-shirt--3 {
+	background-image: url(../img/shirt_3.jpg);	
+}
+
+.win-block {	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 300px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -150px;
+	padding: 20px;
+	border: 2px solid red;
+	box-sizing: border-box;
+	z-index: 9999;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.win-congatuation {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 30px;
+	font-size: 30rem;
+	color: red;
+	text-transform: uppercase;
+}
+
+.win-statistic {
+	margin-bottom: 30px;
+	font-size: 14rem;
+	color: #0a0a0a;
+}
+
+.attemt-count {
+	font-size: 20px;
+	color: blue;
+}
+
+.btn-win-continue {
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 6px;
+	box-sizing: border-box;
+	background-color: #6f4e6e;
+	font-size: 17rem;
+	color: #ffffff;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.overlay {	
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 8888;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.hide {
+	display: none;
+}
+
